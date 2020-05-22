@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: "create", component: CreateComponent },
   { path: "edit/:id", component: EditComponent },
   { path: "list", component: ListComponent },
-  { path: "", redirectTo: "list", pathMatch: "full" },
+  { path: "", redirectTo: "list", pathMatch: "full" },//when you type wrong url it must go to not found page so that use pathmatch =full
 ];
 
 @NgModule({
