@@ -1,9 +1,44 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class IssueService {
+  uri = "http://localhost:4000";
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getIssues() {
+    return this.http.get(`${this.uri}/issues`);
+  }
+
+  getIssueById(id) {
+    return this.http.get(`${this.uri}/issues/${id}`);
+  }
+
+  addIssue(title, responsible, descripion, severity) {
+    const issue = {
+      title: title,
+      responsible: responsible,
+      descripion: descripion,
+      severity: severity,
+    };
+    return this.http.post(`${this.uri}/issues/add`, issue);
+  }
+
+  updateIssue(id, title, responsible, descripion, severity, status) {
+    const issue = {
+      title: title,
+      responsible: responsible,
+      descripion: descripion,
+      severity: severity,
+      status: status,
+    };
+    return this.http.post(`${this.uri}/issues/update/${id}`, issue);
+  }
+
+  deleteIssue(id) {
+    return this.http.get(`${this.uri}/issues/delete/${id}`);
+  }
 }
