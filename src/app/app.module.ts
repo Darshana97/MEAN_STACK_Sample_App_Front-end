@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ListComponent } from "./components/list/list.component";
 import { CreateComponent } from "./components/create/create.component";
 import { EditComponent } from "./components/edit/edit.component";
+import { IssueService } from "./issue.service";
 
 @NgModule({
   declarations: [AppComponent, ListComponent, CreateComponent, EditComponent],
@@ -18,9 +19,8 @@ import { EditComponent } from "./components/edit/edit.component";
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    
   ],
-  providers: [],
+  providers: [IssueService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
