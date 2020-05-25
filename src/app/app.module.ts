@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 
+import { HttpClientModule } from "@angular/common/http";
+
 import { MatToolbarModule } from "@angular/material/toolbar";
 
 import { AppComponent } from "./app.component";
@@ -18,7 +20,9 @@ import { IssueService } from "./issue.service";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
+    ,
   ],
   providers: [IssueService],
   bootstrap: [AppComponent],
