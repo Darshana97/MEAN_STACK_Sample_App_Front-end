@@ -22,7 +22,7 @@ import { IssueService } from "./issue.service";
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    ,
+    
   ],
   providers: [IssueService],
   bootstrap: [AppComponent],

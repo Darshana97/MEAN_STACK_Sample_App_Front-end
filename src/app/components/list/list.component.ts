@@ -9,5 +9,9 @@ import { IssueService } from "src/app/issue.service";
 export class ListComponent implements OnInit {
   constructor(private issueService: IssueService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.issueService.getIssues().subscribe((issues) => {
+      console.log(issues);
+    });
+  }
 }
