@@ -11,7 +11,7 @@ import { IssueService } from "src/app/issue.service";
 })
 export class ListComponent implements OnInit {
   issues: Issue[];
-  displayedColums = ["title", "responsible", "severity", "status", "actions"];
+  displayedColumns = ["title", "responsible", "severity", "status", "actions"];
 
   constructor(private issueService: IssueService, private router: Router) {}
 
