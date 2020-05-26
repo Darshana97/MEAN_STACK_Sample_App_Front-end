@@ -10,11 +10,20 @@ import { IssueService } from "src/app/issue.service";
   styleUrls: ["./list.component.css"],
 })
 export class ListComponent implements OnInit {
-  constructor(private issueService: IssueService) {}
+  issues: Issue[];
+  displayedColums = ["title", "responsible", "severity", "status", "actions"];
+
+  constructor(private issueService: IssueService, private router: Router) {}
 
   ngOnInit(): void {
-    this.issueService.getIssues().subscribe((issues) => {
-      console.log(issues);
+    this.fetchIssues();
+  }
+
+  fetchIssues() {
+    this.issueService.getIssues().subscribe((data: Issue[]) => {
+      this.issues = data;
+      console.log("Data requested");
+      console.log(this.issues);
     });
   }
 }
