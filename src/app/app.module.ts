@@ -25,7 +25,7 @@ import { CreateComponent } from "./components/create/create.component";
 import { EditComponent } from "./components/edit/edit.component";
 import { IssueService } from "./issue.service";
 
-MatOptionModule;
+
 
 @NgModule({
   declarations: [AppComponent, ListComponent, CreateComponent, EditComponent],
