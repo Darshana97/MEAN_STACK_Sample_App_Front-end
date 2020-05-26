@@ -26,4 +26,11 @@ export class ListComponent implements OnInit {
       console.log(this.issues);
     });
   }
+
+  editIssues(id) {
+    this.router.navigate([`/edit/${id}`]);
+  }
+
+  
+
 }
