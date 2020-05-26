@@ -27,11 +27,11 @@ export class IssueService {
     return this.http.post(`${this.uri}/issues/add`, issue);
   }
 
-  updateIssue(id, title, responsible, descripion, severity, status) {
+  updateIssue(id, title, responsible, description, severity, status) {
     const issue = {
       title: title,
       responsible: responsible,
-      descripion: descripion,
+      description: description,
       severity: severity,
       status: status,
     };
