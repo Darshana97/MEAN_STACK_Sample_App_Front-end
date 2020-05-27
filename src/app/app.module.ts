@@ -5,6 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { HttpClientModule } from "@angular/common/http";
 
+import { ReactiveFormsModule } from "@angular/forms";
+
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -25,8 +27,6 @@ import { CreateComponent } from "./components/create/create.component";
 import { EditComponent } from "./components/edit/edit.component";
 import { IssueService } from "./issue.service";
 
-
-
 @NgModule({
   declarations: [AppComponent, ListComponent, CreateComponent, EditComponent],
   imports: [
@@ -34,6 +34,7 @@ import { IssueService } from "./issue.service";
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
