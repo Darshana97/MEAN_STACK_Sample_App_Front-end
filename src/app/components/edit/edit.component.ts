@@ -1,7 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, ActivatedRoute } from '@angular/router';
-import { IssueService } from "src/app/issue.service";
+import { Router, ActivatedRoute } from "@angular/router";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { MatSnackBar } from "@angular/material/snack-bar";
 
+import { IssueService } from "src/app/issue.service";
+import { Issue } from "../../issue.model";
 
 @Component({
   selector: "app-edit",
