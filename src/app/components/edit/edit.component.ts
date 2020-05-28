@@ -24,5 +24,15 @@ export class EditComponent implements OnInit {
     private fb: FormBuilder
   ) {}
 
+  createForm() {
+    this.updateForm = this.fb.group({
+      title: ["", Validators.required],
+      responsible: "",
+      description: "",
+      severity: "",
+      status: "",
+    });
+  }
+
   ngOnInit(): void {}
 }
