@@ -12,7 +12,17 @@ import { Issue } from "../../issue.model";
   styleUrls: ["./edit.component.css"],
 })
 export class EditComponent implements OnInit {
-  constructor(private issueService: IssueService) {}
+  id: String;
+  issue: any = {};
+  updateForm: FormGroup;
+
+  constructor(
+    private issueService: IssueService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private snackBar: MatSnackBar,
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {}
 }
