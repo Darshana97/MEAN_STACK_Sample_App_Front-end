@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from '@angular/router';
 import { IssueService } from "src/app/issue.service";
+
 
 @Component({
   selector: "app-edit",
