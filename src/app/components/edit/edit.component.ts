@@ -42,7 +42,7 @@ export class EditComponent implements OnInit {
       this.issueService.getIssueById(this.id).subscribe((res) => {
         this.issue = res;
         this.updateForm.get("title").setValue(this.issue.title);
-        this.updateForm.get("resposible").setValue(this.issue.resposible);
+        this.updateForm.get("resposible").setValue(this.issue.responsible);
         this.updateForm.get("description").setValue(this.issue.description);
         this.updateForm.get("severity").setValue(this.issue.severity);
         this.updateForm.get("status").setValue(this.issue.status);
